@@ -16,7 +16,7 @@ namespace FolderTag
         #region ============================== Definition ==============================
 
         private const string mPrefsFile = nameof(FolderTag) + "_Prefs.json";
-        private const string mPrefsPath = "ProjectSettings\\" + mPrefsFile;
+        private static readonly string mPrefsPath = Path.Combine("ProjectSettings", mPrefsFile);
         private const int mGradientWidth = 16;
 
         public static EditorOption<string> Opt_FolderTagPath = new EditorOption<string>(nameof(FolderTag) + "_FolderTagPath", mPrefsPath);
